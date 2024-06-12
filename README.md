@@ -8,5 +8,5 @@ Simple Rich Presence for Roblox Studio scripts on Discord.
 - npm i axios
 
 # Why use this?
-Idk
+Idk                                                      
 Source: Trust me bro :D
