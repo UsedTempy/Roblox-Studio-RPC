@@ -6,3 +6,7 @@ Simple Rich Presence for Roblox Studio scripts on Discord.
 - npm i express
 - npm i discord-rtc
 - npm i axios
+
+# Why use this?
+Idk
+Source: Trust me bro :D
