@@ -21,9 +21,10 @@ app.get("/initUser/:gameId", async (req, res) => {
         const nameResult = await axios.get(`https://games.roblox.com/v1/games?universeIds=${gameId}`)
 
         rpc.setActivity({
-            details: "Idle",
+            details: `Place: ${nameResult.data.data[0].name}`,
+            state: "Idle",
             largeImageKey: iconResult.data.data[0].imageUrl,
-            largeImageText: nameResult.data.data[0].name,
+            largeImageText: "Roblox Studio",
             smallImageKey: 'https://media.tenor.com/TYDHUP2kPT4AAAAi/rsc-roblox-studio-community.gif',
             startTimestamp: initTimestamp,
         })
@@ -62,10 +63,11 @@ app.get("/setScript/:scriptName/:gameId", async (req, res) => {
         const nameResult = await axios.get(`https://games.roblox.com/v1/games?universeIds=${gameId}`)
 
         rpc.setActivity({
+            state: `Place: ${nameResult.data.data[0].name}`,
             details: `Editing: ${scriptName}`,
             largeImageKey: 'https://cdn.discordapp.com/app-assets/383226320970055681/565944800105332777.png?size=160',
             smallImageKey: 'https://media.tenor.com/TYDHUP2kPT4AAAAi/rsc-roblox-studio-community.gif',
-            largeImageText: nameResult.data.data[0].name,
+            largeImageText: "Roblox Studio",
             startTimestamp: initTimestamp,
         })
 
@@ -88,9 +90,10 @@ app.get("/clearScript/:gameId", async (req, res) => {
         const nameResult = await axios.get(`https://games.roblox.com/v1/games?universeIds=${gameId}`)
 
         rpc.setActivity({
-            details: "Idle",
+            details: `Place: ${nameResult.data.data[0].name}`,
+            state: "Idle",
             largeImageKey: iconResult.data.data[0].imageUrl,
-            largeImageText: nameResult.data.data[0].name,
+            largeImageText: "Roblox Studio",
             smallImageKey: 'https://media.tenor.com/TYDHUP2kPT4AAAAi/rsc-roblox-studio-community.gif',
             startTimestamp: initTimestamp,
         })
